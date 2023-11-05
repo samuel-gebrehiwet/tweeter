@@ -7,13 +7,36 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- Bungee AND Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css">
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css">
+    
+    <!-- Tweet Form CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css">
+
+    <!-- Tweet Post CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
+    <!-- Timeago JS for timestamp calculator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Tweet Rendering JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
@@ -21,9 +44,39 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div>
+        <div><span>Write</span> a new tweet</div>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
 
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2><span>Samuel</span> Gebrehiwet</h2>
+      </div>
+  </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id='tweet-text' class="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section id='tweets-container'>
+
+      </section>
+    </main>
+    <script src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>

@@ -1,0 +1,33 @@
+nav {
+  background-color: #4056A1;
+  height: 120px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+nav > span, nav > div {
+  margin: 0 1.5em;
+}
+nav > span {
+  font-family: Bungee, san-serif;
+}
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav > div > div {
+  display: inline-block;
+}
+nav > div > div span {
+  font-weight: 600;
+}
+nav > div .fas {
+  color: red;
+}

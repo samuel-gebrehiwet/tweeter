@@ -1,0 +1,86 @@
+main.container {
+  .new-tweet{
+    form{
+      display: flex;
+      flex-direction: column;
+  
+      label{
+        font-weight: 600;
+      }
+
+      div{
+        display: flex;
+        justify-content: space-between;
+        font-family: "Bungee",sans-serif;
+        margin-top: .7rem;
+      }
+
+      div.error{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: red;
+        outline: 2px solid red;
+        outline-offset: .2rem;
+        margin: 0 0 .5rem 0;
+        padding: .5rem;
+        font-size: 1rem;
+      }
+
+      div.error > *{
+        text-align: center;
+        margin: 0 auto;
+      }
+      
+      .counter.negative{
+        color: red;
+      }
+    }
+    h2{
+      margin-block: 0;
+      margin: .5rem 0;
+    }
+  } 
+}
+
+.tweet-text{
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  background-color: transparent;
+  border-bottom: 5px solid black;
+  line-height: 1;
+  margin-top: .5rem;
+}
+
+.new-tweet form > div button{
+  border: none;
+  padding: .3rem .5rem;
+  text-decoration: none;
+  background: #4056A1;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.new-tweet form > div button:hover,
+.new-tweet form > div button:focus {
+    background: #0053ba;
+}
+
+.new-tweet form > div button:active {
+  border: 1px solid #fff;
+  box-shadow: 0 0 5px 2px rgba(36, 80, 226, 0.931);
+}
+
+.new-tweet form > div button:active {
+    transform: scale(0.99);
+}
+

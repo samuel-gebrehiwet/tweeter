@@ -1,0 +1,42 @@
+$nav-background: #4056A1;
+$primary-font: Bungee,san-serif;
+
+nav {
+background-color: $nav-background;
+height: 120px;
+color: #ffffff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+position: fixed;
+top:0;
+z-index: 100;
+
+  & > span, & > div{
+    margin: 0 1.5em;
+  }
+
+  & > span{
+    font-family: $primary-font;
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > div > div {
+    display: inline-block;
+  }
+
+  & > div > div span {
+    font-weight: 600;
+  }
+
+  & > div .fas {
+    color: red;
+   }
+}
